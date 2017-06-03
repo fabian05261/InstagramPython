@@ -8,10 +8,13 @@
   <body>
     <div class="Menu">
       <body background = " ../static/imagenes/lobo.jpg">
+      {% csrf_token %}
       <button type="button" id = "home"><i class="material-icons">home</i></button>
       <button type="button" id = "search"><i class="material-icons">location_searching</i></button>
       <button type="button" id = "photos"><i class="material-icons">photo_camera</i></button>
       <button type="button" id = "profile"><i class="material-icons">person</i></button>
-    </div>
+
+    </div><br>
+    <a href="{% url 'logout' %}">Cerrar Sesion</a>
    </body>
 </html>
